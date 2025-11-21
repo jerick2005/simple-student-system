@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resume Management System</h1>
+            <p>Manage your professional resumes with ease</p>
+        </header>
+
+        <main>
+            <section class="resume-form">
+                <h2>Add/Edit Resume</h2>
+                <form id="resumeForm">
+                    <div class="form-group image-upload-container">
+                        <label for="imageUpload" class="image-upload-label">
+                            <div class="image-preview" id="imagePreview">
+                                <img src="images/default-avatar.png" alt="Profile Preview" id="previewImage">
+                                <span class="upload-text">Click to upload profile image</span>
+                            </div>
+                        </label>
+                        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required value="Jerick Aradilla">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required value="jerickaradilla@gmail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required value="6666666">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">Education</label>
+                        <input type="text" id="education" required value="USTP JASAAN">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skills">Skills (comma separated)</label>
+                        <textarea id="skills" required>HTML, CSS, JavaScript, Python, Java, Git, React, Node.js, SQL, Problem Solving</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Work Experience (one per line)</label>
+                        <textarea id="experience" required>IT Intern at Tech Solutions Inc. - Assisted in website development and maintenance
+Freelance Web Developer - Created responsive websites for small businesses
+Coding Tutor - Taught programming fundamentals to beginners
+University IT Helpdesk - Provided technical support to students and faculty</textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn">Add Resume</button>
+                        <button type="button" id="cancelBtn" style="display: none;">Cancel</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="resumes-list">
+                <h2>Resumes</h2>
+                <div id="resumesContainer" class="resumes-container">
+                    <!-- Resume cards will be dynamically inserted here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
